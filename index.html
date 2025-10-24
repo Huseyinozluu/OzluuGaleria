@@ -1,0 +1,128 @@
+<index.html>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <title>ÖZLÜ Galeria</title>
+    <link rel="stylesheet" href="/Users/Hüseyin/Desktop/ÖZLÜ_Galeria/css.css">
+    <link rel="stylesheet" href="/Users/Hüseyin/Desktop/ÖZLÜ_Galeria/main.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="shortcut icon" href="/Users/Hüseyin/Desktop/ÖZLÜ_Galeria/images/BMW_logo_(gray).svg.png" type="image/x-icon">
+</head>
+<body>
+    <header class="menü">
+        <div class="logo">
+            <a href="#">ÖZLÜ Galeria</a>
+        </div>
+
+        <nav id="navbar">
+            <ul>
+                <li><a href="#">Ana Sayfa</a></li>
+                <li><a href="#">Araçlar</a></li>
+                <li><a href="#">Hakkımızda</a></li>
+                <li><a href="#">İletişim</a></li>
+            </ul>
+        </nav>
+
+        <div class="ikonlar">
+            <i id="dark-toggle" class="fa-solid fa-moon"></i>
+            <i id="menu-toggle" class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+
+    <section class="araclar">
+        <h1>Araçlarımız</h1>
+
+        <div class="arac-listesi">
+            <div class="arac-kart">
+                <img src="/Users/Hüseyin/Desktop/ÖZLÜ_Galeria/BMW_M4_(G82)_IMG_4183.jpg" alt="BMW M4 Competition">
+                <h2>BMW M4 Competition</h2>
+                <p class="fiyat">15.000.000 TL</p>
+                <p>2024 Model | KM: 0</p>
+                <button>Satin Al</button>
+            </div>
+
+            <div class="arac-kart">
+                <img src="/Users/Hüseyin/Desktop/ÖZLÜ_Galeria/aston martın.jpg" alt="Aston Martin V12">
+                <h2>ASTON MARTİN Vantage V12</h2>
+                <p class="fiyat">19.500.000 TL</p>
+                <p>2023 Model | KM: 8500</p>
+                <button>Satin Al</button>
+            </div>
+
+            <div class="arac-kart">
+                <img src="/Users/Hüseyin/Desktop/ÖZLÜ_Galeria/audi.jpg" alt="Audi RS7 Quattro">
+                <h2>AUDI RS7 Quattro</h2>
+                <p class="fiyat">15.350.000 TL</p>
+                <p>2023 Model | KM: 7000</p>
+                <button>Satin Al</button>
+            </div>
+
+            <div class="arac-kart">
+                <img src="/Users/Hüseyin/Desktop/ÖZLÜ_Galeria/mercedes.jpg" alt="Mercedes SL AMG">
+                <h2>MERCEDES-BENZ SL AMG</h2>
+                <p class="fiyat">9.650.000 TL</p>
+                <p>2023 Model | KM: 6500</p>
+                <button>Satin Al</button>
+            </div>
+        </div>
+    </section>
+
+    <div id="form-popup" class="popup">
+    <div class="popup-content">
+        <span id="close-popup">&times;</span>
+        <h2>Araç Satın Al</h2>
+        <form id="buy-form">
+            <label>Ad Soyad</label>
+            <input type="text" id="name" required>
+
+            <label>Telefon</label>
+            <input type="tel" id="phone" required>
+
+            <label>E-posta</label>
+            <input type="email" id="email" required>
+
+            <label>Mesaj</label>
+            <textarea id="message" rows="4" placeholder="İstek veya notunuzu yazın..."></textarea>
+
+            <button type="submit">Gönder</button>
+        </form>
+    </div>
+</div> 
+
+    <footer class="iletisim">
+        <div class="sosyal">
+            <p>Bizi Sosyal Medyadan Takip Edin</p>
+            <div class="ikonlar">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-whatsapp"></i>
+            </div>
+        </div>
+        <div class="telefon">
+            <i class="fa-solid fa-phone"></i>
+            <span>545 833 33 33</span>
+        </div>
+        <p class="haklar"><i class="fa-regular fa-copyright"></i> ÖZLÜ Galeria - Tüm hakları saklıdır.</p>
+    </footer>
+
+    <script>
+        // 🌙 Karanlık Tema
+        const toggle = document.getElementById("dark-toggle");
+        toggle.addEventListener("click", () => {
+            document.body.classList.toggle("dark");
+            toggle.classList.toggle("fa-moon");
+            toggle.classList.toggle("fa-sun");
+        });
+
+        // 📱 Mobil Menü
+        const menuToggle = document.getElementById("menu-toggle");
+        const navbar = document.getElementById("navbar");
+
+        menuToggle.addEventListener("click", () => {
+            navbar.classList.toggle("aktif");
+        });
+    </script>
+</body>
+</html>
